@@ -24,7 +24,8 @@ export class PIIDetector {
     phone: /\b(\+?1[-.\s]?)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})\b/g,
     ssn: /\b\d{3}-?\d{2}-?\d{4}\b/g,
     creditCard: /\b(?:\d{4}[-\s]?){3}\d{4}\b/g,
-    address: /\b\d{1,5}\s\w+\s\w+,\s\w{2}\s\d{5}\b/g
+    address: /\b\d{1,5}\s\w+\s\w+,\s\w{2}\s\d{5}\b/g,
+    dob: /\b\d{1,2}[-/]\d{1,2}[-/]\d{2,4}\b/g
   };
 
   static detectPII(text: string): PIIMatch[] {
