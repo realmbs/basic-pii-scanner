@@ -1,13 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic PII Scanner</title>
+  <meta name="description" content="a basic PII scanner for text files">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Basic PII Scanner</h1>
+        <p class="header__subtitle">Identify personal information in your files</p>
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="theme-toggle__icon"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <!-- Upload Section -->
+        <section id="upload-section" class="upload-section">
+          <div id=upload-area class="upload-area">
+            <div class="upload-area__content">
+              <div class="upload-area__icon"></div>
+              <h2>Upload File</h2>
+              <p>Drop your PDF, DOCX, or TXT file here or click to browse</p>
+              <input type="file" id="file-input" accept=".pdf,.docx,.txt" hidden>
+              <button id="browse-btn" class="btn btn--primary">Browse</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section id="loading-section" class="loading-section" hidden>
+          <div class="loading-spinner"></div>
+          <p>Processing your file...</p>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="results-section" hidden>
+          <div class="results-header">
+            <h2>Scan Results</h2>
+            <div class="results-actions">
+              <button id="new-scan-btn" class=" btn--secondary">New Scan</button>
+              <button id="export-btn" class="btn--primary">Export Clean Version</button>
+            </div>
+          </div>
+
+          <div class="results-content">
+            <!-- PII Controls -->
+            <aside class="pii-controls">
+              <h3>PII Categories</h3>
+              <div id="pii-toggles" class="pii-toggles">
+                <!-- Dynamic generation -->
+              </div>
+              <div id="pii-stats" class="pii-stats">
+                <!-- Dynamic generation -->
+              </div>
+            </aside>
+
+            <!-- Document Display -->
+            <div class="document-display">
+              <div id="document-content" class="document-content">
+                <!-- Processed doc content -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy;, 2025 Basic PII Scanner</p>
+      </div>
+    </footer>
+  </div>
+
+  <script type=" module" src="/src/main.ts"></script>
+</body>
+
 </html>
