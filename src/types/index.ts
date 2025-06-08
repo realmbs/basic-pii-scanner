@@ -8,7 +8,7 @@ export interface PIIMatch {
   type: string; // type of the match ('pii', 'piicategory', etc)
   text: string; // matched text
   startIndex: number; // start index of match in original text
-  endIndex: number // end index of match in original text
+  endIndex: number; // end index of match in original text
   confidence: number; // confidence score of the match ( 0.0 to 1.0)
 }
 
