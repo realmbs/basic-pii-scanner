@@ -76,4 +76,14 @@ export class FileProcessor {
     });
   }
 
+  // processPDF(file: File): Promise<FileProcessingResult>
+
+  // processDOCX(file: File): Promise<FileProcessingResult>
+
+  // static getSupportedTyles(): string[]
+
+  // static isSupported(file: File): boolean
+
+  // static formatFileSize(bytes: number): string
+
 }
