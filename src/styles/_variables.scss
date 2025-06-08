@@ -1,1 +1,38 @@
-// src/styles/_variables.scss - colors, fonts, breakpoints
+// colors
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+
+  // theme colors
+  --primary: #6366f1;
+  --primary-hover: #5855eb;
+  --secondary: #64748b;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  // background gradient
+  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  // text colors
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-light: #ffffff;
+
+  // spacing
+  --container-max: 1200px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  // border radius
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  // transitions
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,12 +1,15 @@
-// Main application entry point:
-// import all components
-// initialize FileUpload, PIIHighlighter, ResultsPanel, ThemeToggle
-// setup global event handlers
-// coordinate between components
+import './styles/main.scss';
 
-// Application flow:
-//   1. FileUpload processes file
-//   2. PIIDetector analyzes text
-//   3. PIIHighlighter displays results
-//   4. ResultsPanel manages controls
+// initialize theme
+document.documentElement.setAttribute('data-theme', 'dark');
+
+// theme toggle logic
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle?.addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+
 console.log('test');

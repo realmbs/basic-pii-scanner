@@ -1,1 +1,25 @@
-// src/styles/_layout.scss - grid, containers
+@forward 'variables';
+
+// container
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+// main content
+.main {
+  flex: 1;
+  padding: var(--spacing-lg) 0;
+}
+
+// results section grid
+.results-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--spacing-lg);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

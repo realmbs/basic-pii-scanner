@@ -1,1 +1,5 @@
-// src/styles/main.scss - import all partials
+@use 'variables';
+@use "base";
+@use 'layout';
+@use 'components';
+@use 'themes';

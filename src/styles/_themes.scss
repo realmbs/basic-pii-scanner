@@ -1,1 +1,45 @@
-// src/styles/_themes.scss - dark/light theme variables
+@forward 'variables';
+
+// dark theme
+[data-theme="dark"] {
+  --glass-bg: rgba(0, 0, 0, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --bg-gradient: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+// theme specific overrides
+[data-theme="dark"] {
+  .upload-area {
+    border-color: rgba(255, 255, 255, 0.3);
+    
+    &:hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+    }
+  }
+  
+  .document-content {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-light);
+    border: 1px solid var(--glass-border);
+  }
+  
+  .theme-toggle__icon {
+    background: var(--primary);
+    
+    &::before {
+      background: var(--text-light);
+    }
+  }
+}
+
+// light theme
+[data-theme="light"] {
+  .upload-area {
+    &:hover {
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+    }
+  }
+}
