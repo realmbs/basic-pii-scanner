@@ -84,6 +84,12 @@
   cursor: pointer;
   transition: var(--transition);
   border: 2px dashed var(--glass-border);
+
+  &.dragover {
+    border-color: var(--primary);
+    background: rgba(99, 102, 241, 0.1);
+    transform: scale(1.02);;
+  }
   
   &:hover {
     border-color: var(--primary);
